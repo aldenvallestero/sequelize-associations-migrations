@@ -4,11 +4,11 @@ console.log('Connecting to database ...');
 
 setTimeout(async () => {
   const students = await Student.findOne({
-    raw: true,
     where: {
       id: 1,
     },
     include: 'courses',
   });
-  console.log(students);
-}, 5000);
+
+  console.log(students.dataValues.courses[0].dataValues);
+}, 2000);
