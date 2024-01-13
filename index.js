@@ -29,4 +29,13 @@ setTimeout(async () => {
   }, {
     include: 'courses',
   });
+  
+  /**
+   * Create: Many to Many (Use Existing Foreign Key)
+   */
+
+  await Student.create({
+    name: 'Coco',
+    courseId: 1
+  });
 }, 2000);
